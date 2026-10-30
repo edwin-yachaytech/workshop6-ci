@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, render_template, request, redirect, url_for
 from models import list_courses, get_course
 
