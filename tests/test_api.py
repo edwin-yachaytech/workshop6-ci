@@ -20,3 +20,9 @@ def test_square_returns_number_and_square():
 
 def test_unknown_route_returns_404():
     assert client().get('/unknown').status_code == 404
+
+
+def test_health_returns_ok():
+    response = client().get('/health')
+    assert response.status_code == 200
+    assert response.get_json() == {'status': 'ok'}

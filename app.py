@@ -48,3 +48,8 @@ def success():
 @app.get('/')
 def home():
     return redirect(url_for('courses'))
+
+
+@app.get('/health')
+def health():
+    return jsonify(status='ok')
